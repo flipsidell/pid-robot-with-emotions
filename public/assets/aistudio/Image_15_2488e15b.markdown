@@ -1,0 +1,202 @@
+---
+name: Kinetic Telemetry & Control
+colors:
+  surface: '#0b1322'
+  surface-dim: '#0b1322'
+  surface-bright: '#31394a'
+  surface-container-lowest: '#060e1d'
+  surface-container-low: '#141c2b'
+  surface-container: '#18202f'
+  surface-container-high: '#222a3a'
+  surface-container-highest: '#2d3545'
+  on-surface: '#dbe2f7'
+  on-surface-variant: '#b9cacb'
+  inverse-surface: '#dbe2f7'
+  inverse-on-surface: '#293040'
+  outline: '#849495'
+  outline-variant: '#3b494b'
+  surface-tint: '#00dbe9'
+  primary: '#dbfcff'
+  on-primary: '#00363a'
+  primary-container: '#00f0ff'
+  on-primary-container: '#006970'
+  inverse-primary: '#006970'
+  secondary: '#aec6ff'
+  on-secondary: '#002e6a'
+  secondary-container: '#4f8eff'
+  on-secondary-container: '#00275e'
+  tertiary: '#fff4ec'
+  on-tertiary: '#482900'
+  tertiary-container: '#ffd1a2'
+  on-tertiary-container: '#885200'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#7df4ff'
+  primary-fixed-dim: '#00dbe9'
+  on-primary-fixed: '#002022'
+  on-primary-fixed-variant: '#004f54'
+  secondary-fixed: '#d8e2ff'
+  secondary-fixed-dim: '#aec6ff'
+  on-secondary-fixed: '#001a42'
+  on-secondary-fixed-variant: '#004396'
+  tertiary-fixed: '#ffddbb'
+  tertiary-fixed-dim: '#ffb868'
+  on-tertiary-fixed: '#2b1700'
+  on-tertiary-fixed-variant: '#673d00'
+  background: '#0b1322'
+  on-background: '#dbe2f7'
+  surface-variant: '#2d3545'
+typography:
+  headline-xl:
+    fontFamily: Space Grotesk
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 40px
+  headline-xl-mobile:
+    fontFamily: Space Grotesk
+    fontSize: 24px
+    fontWeight: '700'
+    lineHeight: 32px
+  headline-lg:
+    fontFamily: Space Grotesk
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+  headline-md:
+    fontFamily: Space Grotesk
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  telemetry-lg:
+    fontFamily: JetBrains Mono
+    fontSize: 28px
+    fontWeight: '600'
+    lineHeight: 32px
+  telemetry-md:
+    fontFamily: JetBrains Mono
+    fontSize: 16px
+    fontWeight: '500'
+    lineHeight: 20px
+  telemetry-sm:
+    fontFamily: JetBrains Mono
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-caps:
+    fontFamily: JetBrains Mono
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-mobile: 0.75rem
+  margin: 1.5rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2rem
+---
+
+## Brand & Style
+The design system establishes an aerospace-grade, cybernetic telemetry and control interface designed for real-time robotic systems. It caters to robotics engineers, embedded systems researchers, and hardware hobbyists operating autonomous self-balancing robotic platforms. 
+
+The aesthetic is precision-driven high-tech functionalism: a blend of high-contrast digital cockpit instrument panels and tactical dark-mode control centers. The UI evokes clinical calm, zero-latency confidence, and mechanical precision. Visual elements avoid frivolous decorative noise, favoring razor-sharp telemetry readouts, luminous status beacons, micro-grid dividers, and high-legibility telemetry vectors. Visual weight is concentrated around dynamic variables (pitch, roll, angular velocity, PID control loops), allowing operators to detect state variations instantly.
+
+## Colors
+The color palette relies on deep carbon voids to frame luminous signal diagnostics and real-time state metrics. 
+
+### Core Swatches
+- **Primary (`#00F0FF`) — Electric Cyan:** Primary dynamic telemetry state, live IMU vectors, active link indicators, and high-frequency real-time signals.
+- **Secondary (`#0077FF`) — Telemetry Blue:** Interactive control states, active slider tracks, primary button fills, and structural data graphs.
+- **Tertiary (`#FF9F0A`) — Warning & Tuning Amber:** Active PID parameter overrides (Kp, Ki, Kd), motor drive temperature warnings, slip-detection threshold warnings, and mid-level cautions.
+- **Success (`#00E676`) — Nominal Emerald:** Ideal pendulum upright stability, calibrated IMU lock, healthy battery cell states, and authenticated controller link.
+- **Neutral Deep Canvas (`#0B0F17`):** Base canvas background minimizing screen glare during bench test sessions.
+- **Neutral Surface (`#131B2A`):** Structured instrument card base, telemetry tiles, and navigation rails.
+
+### Functional Usage
+Surfaces layer in tonal depth from `#0B0F17` (Canvas) to `#131B2A` (Module Background), and `#1E293B` (Interactive/Hover containers). Active glow effects should be restricted to functional signal pulses and critical alerts using 15% opacity radial color fills rather than blur filters.
+
+## Typography
+A dual-font hierarchy separates human-readable control labels from raw machine feedback:
+
+1. **Space Grotesk:** Drives interface headlines, operational modes, and major chassis subsystem identifiers. Its geometric mechanical cuts reinforce robotic industrial design.
+2. **Plus Jakarta Sans:** Provides frictionless legibility for descriptive copy, setting panels, tooltips, and status descriptions.
+3. **JetBrains Mono:** Dedicated exclusively to metric streams, mathematical parameters, PID adjustments, axis data (pitch $\theta$, yaw $\psi$, roll $\phi$), angular velocities ($\text{deg/s}$), packet latency ($\text{ms}$), and unit markers. 
+
+All mono telemetry tags (`label-caps`) use uppercase tracking with micro letter spacing (`0.05em`) to emphasize instrument display characteristics.
+
+## Layout & Spacing
+The layout leverages a responsive 12-column modular cockpit grid on desktop (expanding to full-width tactical dashboard arrays) and a 4-column consolidated vertical stack on mobile devices.
+
+- **Desktop (1024px+):** Tri-pane layout consisting of a persistent vertical hardware link rail (72px fixed), dynamic telemetry and IMU horizon visualization viewport (8 columns), and direct motor command/PID parameter docking drawer (4 columns).
+- **Tablet (768px - 1023px):** 8-column layout with collapsable parameter sheets and primary horizontal telemetry cards.
+- **Mobile (<768px):** High-density single-column interface prioritizing touch control sticks at the bottom thumb zone, with compact telemetry ticker ribbons fixed at the top screen edge.
+
+Layout gutters enforce modular card isolation, allowing rapid optical scanning across multi-sensor readouts without visual collision.
+
+## Elevation & Depth
+Depth in the system is defined by luminosity and structural containment rather than heavy dropped blurs, preserving display crispness under intense monitor viewing or sunlight field conditions.
+
+- **Base Layer (Ground Zero):** `#0B0F17` canvas surface. Flat, void-like, absorbent.
+- **Level 1 (Telemetry Panels & Cards):** Surface `#131B2A` with a 1px solid structural border (`rgba(255, 255, 255, 0.08)`).
+- **Level 2 (Active Gauges & Popovers):** Elevated surface `#1A2438` accented with a subtle top edge highlight border (`rgba(0, 240, 255, 0.25)`).
+- **Level 3 (Modal Alerts & Emergency Stop):** Surface `#1A2438` paired with ambient glow backdrops tinted to the alert context (`rgba(255, 159, 10, 0.12)` or `rgba(255, 59, 48, 0.2)`).
+
+Glows are restricted to zero-spread, directional neon rim lights to mimic backlit physical instrumentation.
+
+## Shapes
+The system utilizes subtle, soft-cornered geometry (roundedness level `1`). 
+
+- **Cards and Containers:** `4px` corner radii reinforce an industrial terminal aesthetic while removing the harshness of raw right angles.
+- **Sliders, Value Inputs, and Toggles:** `4px` inner radius maintaining cohesion with the container grid.
+- **Control Joystick Well:** Pure circle (`50%` / circular border) to support analog multi-axis thumbstick mechanics.
+- **Status Pills & Mode Tags:** `2px` to `4px` corner radius; avoid full pill-capsules to preserve industrial discipline.
+
+## Components
+
+### Buttons & E-Stop
+- **Standard Action:** `#0077FF` filled background with white bold sans-serif text, `4px` radius, shifting to `#00F0FF` on hover with a high-contrast dark text label.
+- **Secondary / Calibration:** Outlined button featuring 1px `#00F0FF` border, transparent background, and monospaced text.
+- **Emergency Stop (Kill Switch):** Fixed crimson `#FF3B30` surface with high-contrast mechanical hazard hatching, monospaced text, activating instantly without click latency.
+
+### Telemetry Cards
+- Encased in `#131B2A` container with a 1px border (`#1E293B`).
+- Structured header featuring the sensor name in `label-caps` (`#94A3B8`), primary real-time measurement in `telemetry-lg` (`#00F0FF`), and unit indicator in `telemetry-sm`.
+- Integrated micro-sparklines render dynamic data points using 1.5px stroke width without gradient area fills.
+
+### PID Tuning Inputs & Sliders
+- Segmented numeric steppers with inline direct typing via `JetBrains Mono`.
+- Active slider tracks feature a 4px thickness in `#1E293B`, illuminated active fill in `#FF9F0A` (Amber), and a rectangular metallic thumb (`8px x 16px`) with 1px border.
+
+### Digital Toggles
+- Compact rectangular toggle switches (`36px x 20px`). Unchecked state: `#1E293B` track with `#64748B` indicator. Checked state: `#00E676` track with brilliant white square indicator.
+
+### Virtual Joystick Control
+- Circular boundary ring (`#131B2A`) with etched crosshairs (`#1E293B`) indicating zero-deadband reference.
+- Dynamic thumbpad handle: `#0077FF` core with a 2px `#00F0FF` glowing beacon ring transmitting live vector coordinate offsets `(X, Y)` directly beneath the control pad in monospaced format.

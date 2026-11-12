@@ -1,0 +1,8 @@
+{
+  "name": "Kinetic Telemetry & Control",
+  "description": "Aerospace-grade robotic telemetry, inverted pendulum stabilization, gamepad joystick controller, BLE sensor streaming, emotion OLED interface, and ESP32 OTA updater.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
